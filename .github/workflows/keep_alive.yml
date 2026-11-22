@@ -1,0 +1,67 @@
+name: Portfolio & Streamlit Keep-Alive
+
+on:
+  schedule:
+    # Runs every 8 hours (00:00, 08:00, 16:00 UTC) to stay well within Streamlit's 12h sleep window
+    - cron: "0 */8 * * *"
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  keep-apps-awake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      - name: Execute main keep-alive runner
+        run: python main.py
+
+      - name: Commit updated telemetry status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/status.json
+          git diff --staged --quiet || git commit -m "chore: update telemetry & orbital heartbeat"
+          git push
+
+  deploy-portfolio-ui:
+    needs: keep-apps-awake
+    if: always()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload static site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

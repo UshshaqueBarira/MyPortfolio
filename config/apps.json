@@ -1,0 +1,48 @@
+{
+  "portfolio_title": "ORBITAL // APP DECK",
+  "portfolio_subtitle": "Monochrome mission-control index & live keep-alive telemetry for deployed Streamlit apps",
+  "owner_name": "Barira Ushshaque",
+  "github_profile": "https://github.com/yourusername",
+  "apps": [
+    {
+      "id": "book-cricket",
+      "title": "Book Cricket Multiplayer",
+      "category": "Interactive Game",
+      "description": "Turn-based multiplayer book cricket featuring 3D page-flip animations, sound effects, and live scoreboards.",
+      "tech": ["Python", "Streamlit", "CSS 3D"],
+      "url": "https://your-book-cricket.streamlit.app",
+      "repo": "https://github.com/ushshaquebarira/book-cricket",
+      "active": true
+    },
+    {
+      "id": "repo-to-podcast",
+      "title": "RepoToPodcast",
+      "category": "LLM & Audio",
+      "description": "Converts public GitHub repositories into two-voice MP3 podcasts and interactive architectural Q&A.",
+      "tech": ["Python", "Streamlit", "Llama", "TTS"],
+      "url": "https://your-repopodcast.streamlit.app",
+      "repo": "https://github.com/ushshaquebarira/repopodcast",
+      "active": true
+    },
+    {
+      "id": "loan-vs-nifty",
+      "title": "Loan Prepayment vs. Nifty",
+      "category": "Finance",
+      "description": "Models home loan lump-sum prepayments against Nifty50, Nifty100, and Nifty500 index returns.",
+      "tech": ["Python", "Pandas", "Streamlit"],
+      "url": "https://your-loan-calc.streamlit.app",
+      "repo": "https://github.com/ushshaquebarira/loan-vs-nifty",
+      "active": true
+    },
+    {
+      "id": "utility-suite",
+      "title": "Student Basic Utility Suite",
+      "category": "Productivity",
+      "description": "All-in-one utility hub for image compression, background removal, PDF unlocking, and unit conversions.",
+      "tech": ["Python", "Streamlit", "PyMuPDF"],
+      "url": "https://your-utility-tool.streamlit.app",
+      "repo": "https://github.com/ushshaquebarira/Students_Basic_Utility_Tool_Offline",
+      "active": true
+    }
+  ]
+}

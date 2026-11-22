@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORBITAL // APP DECK</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div class="shell">
+    <!-- Top Telemetry & Clock Ribbon -->
+    <header class="telemetry-bar">
+      <div class="brand-cluster">
+        <span class="beacon" aria-hidden="true"></span>
+        <span class="mono" id="portfolio-title">ORBITAL // APP DECK</span>
+      </div>
+      <div class="telemetry-readouts">
+        <span class="mono" id="utc-clock">UTC --:--:--</span>
+        <span class="divider">/</span>
+        <span class="mono" id="last-cron-label">CRON: STANDBY</span>
+      </div>
+    </header>
+
+    <!-- Hero & Orbital Ring -->
+    <section class="hero-stage">
+      <div class="hero-copy">
+        <p class="eyebrow mono">AUTONOMOUS WEBSOCKET KEEP-ALIVE // 8H CYCLE</p>
+        <h1 id="portfolio-subtitle">Deployed Streamlit utilities & interactive tools</h1>
+        <div class="hero-actions">
+          <button class="btn-solid" id="verify-btn">RUN LIVE PROBE</button>
+          <button class="btn-ghost" id="toggle-orbit-btn">ORBITAL VIEW</button>
+          <a class="btn-ghost" id="github-link" href="#" target="_blank" rel="noopener">GITHUB ↗</a>
+        </div>
+      </div>
+
+      <!-- Interactive Orbital Constellation Radar -->
+      <div class="radar-panel" id="radar-panel" title="Click any orbiting node to inspect or launch">
+        <div class="radar-ring ring-outer"></div>
+        <div class="radar-ring ring-inner"></div>
+        <div class="radar-core mono">
+          <span id="radar-count">0</span>
+          <small>NODES</small>
+        </div>
+        <div id="radar-nodes"></div>
+      </div>
+    </section>
+
+    <!-- Filter & Search Strip -->
+    <nav class="filter-strip" aria-label="Filter applications">
+      <div class="pills" id="category-filters"></div>
+      <div class="search-wrap">
+        <input type="search" id="search-input" class="mono" placeholder="FILTER BY NAME OR STACK..." aria-label="Search applications" />
+      </div>
+    </nav>
+
+    <!-- App Cards Grid -->
+    <main class="card-grid" id="app-grid"></main>
+
+    <!-- Command Palette (Ctrl/Cmd + K) -->
+    <div class="palette-backdrop" id="palette-backdrop" aria-hidden="true">
+      <div class="palette-box" role="dialog" aria-label="Quick App Launcher">
+        <input type="text" id="palette-input" class="mono" placeholder="Type app name or 'probe'..." />
+        <ul class="palette-list" id="palette-list"></ul>
+        <div class="palette-footer mono">
+          <span>↑↓ NAVIGATE</span>
+          <span>ENTER LAUNCH</span>
+          <span>ESC CLOSE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live App Preview Modal -->
+    <div class="modal-backdrop" id="preview-modal" aria-hidden="true">
+      <div class="modal-window">
+        <div class="modal-header">
+          <div>
+            <strong id="modal-title" class="mono">APP PREVIEW</strong>
+            <span class="modal-url mono" id="modal-url"></span>
+          </div>
+          <div class="modal-actions">
+            <a id="modal-external" href="#" target="_blank" rel="noopener" class="btn-ghost btn-sm">NEW TAB ↗</a>
+            <button id="modal-close" class="btn-close" aria-label="Close preview">&times;</button>
+          </div>
+        </div>
+        <iframe id="preview-frame" title="Streamlit Live Preview" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
