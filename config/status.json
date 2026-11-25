@@ -1,41 +1,41 @@
 {
-  "last_run_utc": "2026-11-25T05:49:49.741639+00:00",
+  "last_run_utc": "2026-11-25T18:15:36.247824+00:00",
   "apps": {
     "book-cricket": {
       "app_id": "book-cricket",
       "title": "Book Cricket Multiplayer",
       "url": "https://your-book-cricket.streamlit.app",
       "status": "ACTIVE",
-      "latency_ms": 3325,
+      "latency_ms": 3147,
       "detail": "WebSocket active",
-      "checked_at_utc": "2026-11-25T05:49:17.773615+00:00"
+      "checked_at_utc": "2026-11-25T18:14:54.408192+00:00"
     },
     "repo-to-podcast": {
       "app_id": "repo-to-podcast",
       "title": "RepoToPodcast",
       "url": "https://your-repopodcast.streamlit.app",
       "status": "ACTIVE",
-      "latency_ms": 2915,
+      "latency_ms": 3068,
       "detail": "WebSocket active",
-      "checked_at_utc": "2026-11-25T05:49:26.117114+00:00"
+      "checked_at_utc": "2026-11-25T18:15:02.582234+00:00"
     },
     "loan-vs-nifty": {
       "app_id": "loan-vs-nifty",
       "title": "Loan Prepayment vs. Nifty",
       "url": "https://your-loan-calc.streamlit.app",
       "status": "ACTIVE",
-      "latency_ms": 2855,
+      "latency_ms": 2718,
       "detail": "WebSocket active",
-      "checked_at_utc": "2026-11-25T05:49:34.052025+00:00"
+      "checked_at_utc": "2026-11-25T18:15:10.672550+00:00"
     },
     "utility-suite": {
       "app_id": "utility-suite",
       "title": "Student Basic Utility Suite",
       "url": "https://your-utility-tool.streamlit.app",
       "status": "ACTIVE",
-      "latency_ms": 2773,
+      "latency_ms": 12771,
       "detail": "WebSocket active",
-      "checked_at_utc": "2026-11-25T05:49:41.921497+00:00"
+      "checked_at_utc": "2026-11-25T18:15:18.419461+00:00"
     }
   }
 }
